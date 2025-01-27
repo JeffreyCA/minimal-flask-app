@@ -1,3 +1,14 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/alpha/azure.yaml.json
 
 name: compose
+services:
+  pyservice:
+    project: .
+    host: containerapp
+    language: python
+    docker:
+      path: Dockerfile
+resources:
+  pyservice:
+    type: host.containerapp
+    port: 5000
